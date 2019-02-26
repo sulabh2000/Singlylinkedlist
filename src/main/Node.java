@@ -62,7 +62,7 @@ public class Node {
             response.append(temp.getData());
 
             if (temp.next != null) {
-                response.append(" ==> ;");
+                response.append(" ==> ");
             }
             temp = temp.next;
         }
