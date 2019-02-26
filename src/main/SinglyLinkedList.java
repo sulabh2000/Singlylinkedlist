@@ -46,6 +46,6 @@ public class SinglyLinkedList {
         response.append("]");
         return response.toString();
     }
-
+         
 
 }
