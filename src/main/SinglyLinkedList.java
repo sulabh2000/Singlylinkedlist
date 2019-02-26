@@ -36,6 +36,16 @@ public class SinglyLinkedList {
 
     public static void main(String[] args) {
         SinglyLinkedList linkedlist = new SinglyLinkedList();
+        System.out.println(linkedlist);
     }
+    @Override
+    public String toString()
+    {
+        StringBuilder response = new StringBuilder();
+        response.append("[");
+        response.append("]");
+        return response.toString();
+    }
+
 
 }
