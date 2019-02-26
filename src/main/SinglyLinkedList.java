@@ -21,10 +21,21 @@ public class SinglyLinkedList {
             this.data = data;
         }
 
-        public Node(int data, Node next) {
+        public Node(int data) {
             this.data = data;
-            this.next = next;
         }
+        public Node(int data, Node next)
+        {
+            this.data=data;
+            this.next=next;
+        }
+
+    }
+    private Node head = null;
+    private int size = 0;
+
+    public static void main(String[] args) {
+        SinglyLinkedList linkedlist = new SinglyLinkedList();
     }
 
 }
