@@ -52,22 +52,19 @@ public class Node {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         StringBuilder response;
         response = new StringBuilder();
 
         response.append("[");
         Node temp = this.head;
-        while(temp!=null)
-        {
+        while (temp != null) {
             response.append(temp.getData());
 
-            if(temp.next!=null)
-            {
+            if (temp.next != null) {
                 response.append(" ==> ;");
             }
-            temp= temp.next;
+            temp = temp.next;
         }
 
         response.append("]");
@@ -75,15 +72,13 @@ public class Node {
 
     }
 
-    private void insertHead(int data)
-    {
-        Node newNode = new Node(data,this.head);
+    private void insertHead(int data) {
+        Node newNode = new Node(data, this.head);
         this.head = newNode;
         size++;
     }
 
-    private void insertAfter(int data, Node node)
-    {
+    private void insertAfter(int data, Node node) {
         /*Node newNode = new Node(data, node.next);
         node.next= newNode;*/
 
@@ -91,20 +86,16 @@ public class Node {
         size++;
     }
 
-    public void insert(int data)
-    {
-        if(head==null)
-        {
+    public void insert(int data) {
+        if (head == null) {
             insertHead(data);
-        }
-        else
-        {
+        } else {
             Node temp = this.head;
 
-            while(temp.next!=null)
-            {
-                temp=temp.next;
+            while (temp.next != null) {
+                temp = temp.next;
             }
-            insertAfter(data,temp);
+            insertAfter(data, temp);
         }
     }
+}
