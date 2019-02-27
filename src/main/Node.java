@@ -98,4 +98,52 @@ public class Node {
             insertAfter(data, temp);
         }
     }
+    private void removeHead()
+    {
+        Node temp = this.head;
+        if(temp!=null)
+        {
+            int i = this.size--;
+            int response = temp.data;
+            this.head = this.head.next;
+        }
+    }
+
+
+    private void removeAfter(Node node)
+    {
+        int response = -1;
+        Node temp = node.next;
+
+        if(temp!=null)
+        {
+            response = temp.data;
+            node.next = temp.next;
+            size--;
+        }
+    }
+    public int remove(int data)
+    {
+        int response = -1;
+        Node temp = this.head;
+        if(temp.data==data)
+        {
+            removeHead();
+
+        }
+        else
+        {
+            while(temp!=null)
+            {
+                if(temp.data==data)
+                {
+                    removeAfter(temp);
+                    break;
+                }
+                temp = temp.next;
+            }
+        }
+        return response;
+
+    }
 }
